@@ -44,7 +44,7 @@ sleep 1.5
 echo "belum nemu script virus lagi!"
 }
 
-function ganti_user_name{
+function ganti_user_name {
   clear
   echo "Masukkan nama baru: "
   read new_name
