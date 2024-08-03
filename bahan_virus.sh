@@ -4,8 +4,11 @@
 login_file=".login_user"
 
 function show_menu {
+sleep 1.5
 clear
-sleep 1
+git pull
+clear
+sleep 1.5
 echo "
           |=================================================|
           |1.MENU VIRUS1                                    |
@@ -61,11 +64,8 @@ else
   echo "masukan nama baru buat tampilan virus menu: "
   read name
   echo "$name" > "$login_file"
-  clear
   sleep 1.5
   echo "Selamat datang, $name!"
-sleep 2
-git pull
 fi
 
 while true; do
