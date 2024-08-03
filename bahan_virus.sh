@@ -48,8 +48,11 @@ else
   echo "masukan nama baru buat tampilan virus menu: "
   read name
   echo "$name" > "$login_file"
+  clear
+  sleep 1.5
   echo "Selamat datang, $name!"
 sleep 2
+git pull
 fi
 
 while true; do
