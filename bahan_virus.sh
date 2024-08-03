@@ -11,7 +11,8 @@ echo "
           |1.MENU VIRUS1                                    |
           |2.MENU VIRUS2                                    |
           |3.MENU VIRUS3                                    |
-          |4.EXIT                                           |
+          |4.GANTI USER NAME                                |
+          |5.EXIT                                           |
           |=================================================|
 "
 echo
@@ -38,6 +39,18 @@ function virus_menu3 {
 clear
 sleep 1.5
 echo "belum nemu script virus lagi!"
+}
+
+function ganti_user_name{
+  clear
+  echo "Masukkan nama baru: "
+  read new_name
+  name=$new_name
+  echo "$name" > "$login_file"
+  echo "Nama telah diubah menjadi $name "
+sleep 1.5
+  echo "Tekan enter untuk kembali ke menu utama"
+  read
 }
 
 if [ -f "$login_file" ]; then
@@ -68,7 +81,10 @@ while true; do
     3) 
       virus_menu3
       ;;
-     4) 
+    4) 
+      ganti_user_name
+      ;;
+     5) 
       echo "keluar... "
       break
       ;;
